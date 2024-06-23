@@ -1,1 +1,8 @@
-<p>pregunta3 works!</p>
+<div>
+    <label>Monto del préstamo: <input [(ngModel)]="monto" type="number"></label>
+    <button (click)="calcularCuotas()">Calcular</button>
+    <p>Cuotas: {{ cuotas }}</p>
+    <p>Interés: {{ interes * 100 }}%</p>
+    <p>Total a pagar: {{ total | currency }}</p>
+    <p>Monto por cuota: {{ montoCuota | currency }}</p>
+  </div>
