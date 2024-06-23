@@ -1,1 +1,7 @@
 <p>pregunta2 works!</p>
+<div>
+    <label>Cantidad: <input [(ngModel)]="cantidad" type="number"></label>
+    <label>Precio: <input [(ngModel)]="precio" type="number"></label>
+    <button (click)="calcularTotal()">Calcular</button>
+    <p>Total: {{ total | currency }}</p>
+  </div>
