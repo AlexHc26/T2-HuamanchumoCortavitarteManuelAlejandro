@@ -1,1 +1,5 @@
-<p>pregunta4 works!</p>
+<div>
+    <label>Horas trabajadas: <input [(ngModel)]="horas" type="number"></label>
+    <button (click)="calcularSalario()">Calcular</button>
+    <p>Salario semanal: {{ salario | currency }}</p>
+  </div>
