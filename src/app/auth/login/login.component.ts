@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  username: string = '';
+  password: string = '';
 
+  constructor(private router: Router) {}
+
+  login() {
+    if (this.username === 'Apellido' && this.password === '12345') {
+      sessionStorage.setItem('user', this.username);
+      this.router.navigate(['dashboard']);
+    } else {
+      alert('Credenciales incorrectas');
+    }
+  }
 }
